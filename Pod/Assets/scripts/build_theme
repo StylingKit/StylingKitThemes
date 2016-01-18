@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -e
+set -x
+
+COLOR_NC='\033[0m' # No Color
+COLOR_RED='\033[0;31m'
+
+if [ -z $(which sass) ] ;then
+	echo -e "$COLOR_RED'sass' compiler not found. Please install using 'gem install sass'$COLOR_RED"
+	exit 1
+fi
+
+if [ $PODPREPARE == true ] ;then
+	OUTPUT_PATH="${PODS_ROOT}/StylingKitThemes/Assets/$THEME_NAME/css/default.css"
+else
+	OUTPUT_PATH="${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.css"
+fi
+
+echo "Building $THEME_NAME" > "~/Test_$THEME_NAME"
+echo $(env) > "$HOME/pod-env"
+
+sass "${PODS_ROOT}/StylingKitThemes/Assets/$THEME_NAME/scss/default.scss" "$OUTPUT_PATH"

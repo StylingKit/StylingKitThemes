@@ -31,13 +31,17 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.1'
   s.requires_arc = true
 
+  # s.source_files = 'Pod/Classes/**'
+
   s.resource_bundles = {
     'StylingKitThemes-icons' => ['Pod/Assets/icons/*.svg']
   }
 
   s.subspec 'blue' do |ss|
+    ss.prepare_command = 'THEME_NAME=blue PODPREPARE=true Pod/Assets/scripts/build_theme'
+    # ss.prepare_command = "echo test > test"
     ss.resource_bundles = {
-      'StylingKitThemes' => ['Pod/Assets/blue/**/*.css']
+      'StylingKitThemes' => ['Pod/Assets/blue/css/default.css']
     }
   end
 end
