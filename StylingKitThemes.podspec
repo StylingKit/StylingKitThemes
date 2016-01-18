@@ -31,11 +31,13 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.1'
   s.requires_arc = true
 
-  # s.source_files = 'Pod/Classes/**'
+  # s.default_subspec = "blue"
 
-  s.resource_bundles = {
-    'StylingKitThemes-icons' => ['Pod/Assets/icons/*.svg']
-  }
+  s.subspec 'icons' do |ss|
+    ss.resource_bundles = {
+      'StylingKitThemes-icons' => ['Pod/Assets/icons/*.svg']
+    }
+  end
 
   s.subspec 'blue' do |ss|
     ss.default_subspec = 'css'
@@ -44,10 +46,14 @@ Pod::Spec.new do |s|
       sss.resource_bundles = {
         'StylingKitThemes' => ['Pod/Assets/blue/css/*.css']
       }
+
+      sss.dependency 'StylingKitThemes/icons'
     end
 
     ss.subspec 'scss' do |sss|
-      sss.preserve_paths = 'Pod/Assets/blue/scss/*.scss'
+      sss.preserve_paths = ['Pod/Assets/blue/scss/*.scss', 'Pod/Assets/scripts']
+
+      sss.dependency 'StylingKitThemes/icons'
     end
   end
 
