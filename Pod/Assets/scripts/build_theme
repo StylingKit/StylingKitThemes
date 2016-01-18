@@ -3,6 +3,8 @@
 set -e
 set -x
 
+THEME_NAME=${1:-"blue"}
+
 COLOR_NC='\033[0m' # No Color
 COLOR_RED='\033[0;31m'
 
@@ -11,13 +13,12 @@ if [ -z $(which sass) ] ;then
 	exit 1
 fi
 
-if [ $PODPREPARE == true ] ;then
-	OUTPUT_PATH="${PODS_ROOT}/StylingKitThemes/Assets/$THEME_NAME/css/default.css"
+THEME_ROOT="$(dirname $0)/../$THEME_NAME"
+
+if [[ -z $TARGET_BUILD_DIR || -z $CONTENTS_FOLDER_PATH ]] ;then
+	OUTPUT_PATH="$THEME_ROOT/css/default.css"
 else
 	OUTPUT_PATH="${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.css"
 fi
 
-echo "Building $THEME_NAME" > "~/Test_$THEME_NAME"
-echo $(env) > "$HOME/pod-env"
-
-sass "${PODS_ROOT}/StylingKitThemes/Assets/$THEME_NAME/scss/default.scss" "$OUTPUT_PATH"
+sass "$THEME_ROOT/scss/default.scss" "$OUTPUT_PATH"

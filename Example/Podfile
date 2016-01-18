@@ -5,8 +5,6 @@ use_frameworks!
 
 
 target 'StylingKitThemes_Tests', :exclusive => true do
-  # pod "StylingKitThemes/blue", :path => "../"
-  pod "StylingKitThemes/blue", :git => "../"
-
+  pod "StylingKitThemes/blue", :path => "../"
   
 end

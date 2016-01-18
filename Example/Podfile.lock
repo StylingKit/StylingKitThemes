@@ -1,14 +1,14 @@
 PODS:
-  - StylingKitThemes (0.1.0)
+  - StylingKitThemes/blue (0.1.0)
 
 DEPENDENCIES:
-  - StylingKitThemes (from `../`)
+  - StylingKitThemes/blue (from `../`)
 
 EXTERNAL SOURCES:
   StylingKitThemes:
     :path: "../"
 
 SPEC CHECKSUMS:
-  StylingKitThemes: 0b40b6785273c87bb531623fe7035509f0534a49
+  StylingKitThemes: 0f0ad6b2127681a5f58e71e4d8873a357dfdcf94
 
 COCOAPODS: 0.39.0

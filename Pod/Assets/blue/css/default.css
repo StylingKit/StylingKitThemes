@@ -28,15 +28,15 @@
  */
 /* Containers */
 .container {
-  border: 1px solid #d8d9dc; }
+  border: 1px solid #D8D9DC; }
 
 .horizontal-line {
-  background-color: #d8d9dc;
+  background-color: #D8D9DC;
   height: 1; }
 
 /* Navigation Bar */
 navigation-bar {
-  background-color: #0096d7;
+  background-color: #0096D7;
   opacity: 1;
   color: white; }
 
@@ -56,12 +56,12 @@ tab-bar {
   background-color: white; }
 
 tab-bar tab-bar-item {
-  color: #b0b1b4;
+  color: #B0B1B4;
   font-family: "Avenir";
   font-size: 10pt; }
 
 tab-bar tab-bar-item:selected {
-  color: #0096d7; }
+  color: #0096D7; }
 
 /* Typography */
 /*
@@ -104,7 +104,7 @@ tab-bar tab-bar-item:selected {
 
 .p.small {
   font-size: 12pt;
-  color: #53555a; }
+  color: #53555A; }
 
 /* Alignment */
 .text-left {
@@ -124,7 +124,7 @@ tab-bar tab-bar-item:selected {
 .button {
   border-radius: 3pt;
   color: white;
-  background-color: #0096d7;
+  background-color: #0096D7;
   font-family: "Avenir";
   font-size: 14pt;
   text-transform: uppercase;
@@ -147,15 +147,15 @@ tab-bar tab-bar-item:selected {
  * --------------------------------
  */
 collection-view {
-  background-color: #f7f7f7; }
+  background-color: #F7F7F7; }
 
 collection-view .icon {
-  background-color: #f7f7f7; }
+  background-color: #F7F7F7; }
 
 .collection-view-cell {
-  border: 0px solid #b0b1b4;
+  border: 0px solid #B0B1B4;
   border-radius: 5pt;
-  box-shadow: 0px 1px 1px 0px #d8d9dc;
+  box-shadow: 0px 1px 1px 0px #D8D9DC;
   background-color: white; }
 
 /*
@@ -164,16 +164,16 @@ collection-view .icon {
  */
 /* Text fields */
 .text-field:normal {
-  color: #b0b1b4;
+  color: #B0B1B4;
   -ios-border-style: none;
-  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #53555a 99%);
+  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #53555A 99%);
   /* Note: to achieve a bottom border, which is not currently supported */
   font-family: "Avenir";
   font-size: 14pt;
   padding: 2pt 5pt; }
 
 .text-field:highlighted {
-  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #0096d7 99%); }
+  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #0096D7 99%); }
 
 .text-field.large {
   font-size: 18pt; }
@@ -183,29 +183,29 @@ collection-view .icon {
 
 .text-field.success,
 .text-field.success:highlighted {
-  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #00d705 99%); }
+  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #00D705 99%); }
 
 .text-field.warning,
 .text-field.warning:highlighted {
-  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #d7d400 99%); }
+  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #D7D400 99%); }
 
 .text-field.error,
 .text-field.error:highlighted {
-  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #d70000 99%); }
+  background-color: linear-gradient(rgba(255, 255, 255, 0) 98%, #D70000 99%); }
 
 /* Text views */
 .text-view {
-  color: #b0b1b4;
+  color: #B0B1B4;
   -ios-border-style: none;
-  background-color: #f7f7f7;
-  border: 1pt solid #f7f7f7;
+  background-color: #F7F7F7;
+  border: 1pt solid #F7F7F7;
   font-family: "Avenir";
   font-size: 14pt; }
 
 /* Segmented controls */
 .segmented-control {
-  background-color: #0096d7;
-  color: #0096d7;
+  background-color: #0096D7;
+  color: #0096D7;
   font-family: "Avenir";
   font-size: 14pt; }
 
@@ -214,24 +214,24 @@ collection-view .icon {
 
 /* Switches */
 .switch {
-  color: #53555a;
-  -ios-tint-color: #53555a; }
+  color: #53555A;
+  -ios-tint-color: #53555A; }
 
 .switch thumb {
-  color: #0096d7; }
+  color: #0096D7; }
 
 /* Sliders */
 .slider thumb {
-  background-color: #0096d7;
-  border: 1px solid #53555a;
+  background-color: #0096D7;
+  border: 1px solid #53555A;
   background-size: 28 28;
   border-radius: 14px; }
 
 .slider min-track {
-  color: #0096d7; }
+  color: #0096D7; }
 
 .slider max-track {
-  color: #d8d9dc; }
+  color: #D8D9DC; }
 
 /*
  * Icons
@@ -1361,7 +1361,7 @@ pixate-config {
  * --------------------------------
  */
 .table-cell text-label {
-  color: #53555a;
+  color: #53555A;
   font-family: "Avenir";
   font-size: 14pt;
   font-weight: light; }
@@ -1370,14 +1370,16 @@ pixate-config {
   background-color: white; }
 
 .table-cell:nth-child(odd) {
-  background-color: #f7f7f7; }
+  background-color: #F7F7F7; }
 
 /* Note: would prefer to use classes here, but since we're not using a custom section view, there's no easy way to set one */
 table-view-headerfooter-view {
-  background-color: #0070a3;
+  background-color: #0070A3;
   font-family: "Avenir"; }
 
 table-view-headerfooter-view text-label {
   text-transform: uppercase;
   color: white;
   font-size: 12pt; }
+
+/*# sourceMappingURL=default.css.map */
