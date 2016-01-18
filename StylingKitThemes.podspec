@@ -39,11 +39,12 @@ Pod::Spec.new do |s|
 
   s.subspec 'blue' do |ss|
     ss.resource_bundles = {
-      'StylingKitThemes' => ['Pod/Assets/blue/css/**']
+      'StylingKitThemes' => ['Pod/Assets/blue/css/*.css']
     }
   end
 
-  s.prepare_command = <<-CMD
-    Pod/Assets/scripts/build_theme blue
-  CMD
+  # Disabled to not require clients to have sass presinstalled
+  # s.prepare_command = <<-CMD
+  #   Pod/Assets/scripts/build_theme blue
+  # CMD
 end

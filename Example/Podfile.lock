@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  StylingKitThemes: 0f0ad6b2127681a5f58e71e4d8873a357dfdcf94
+  StylingKitThemes: fe35908118e5f231653ddbd70129575e460c34e6
 
 COCOAPODS: 0.39.0
