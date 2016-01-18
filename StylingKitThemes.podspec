@@ -38,10 +38,9 @@ Pod::Spec.new do |s|
   }
 
   s.subspec 'blue' do |ss|
-    ss.prepare_command = 'THEME_NAME=blue PODPREPARE=true Pod/Assets/scripts/build_theme'
-    # ss.prepare_command = "echo test > test"
+    ss.prepare_command = 'Pod/Assets/scripts/build_theme blue'
     ss.resource_bundles = {
-      'StylingKitThemes' => ['Pod/Assets/blue/css/default.css']
+      'StylingKitThemes' => ['Pod/Assets/blue/css/**']
     }
   end
 end

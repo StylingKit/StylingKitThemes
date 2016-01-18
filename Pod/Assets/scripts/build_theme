@@ -21,4 +21,5 @@ else
 	OUTPUT_PATH="${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/default.css"
 fi
 
+mkdir -p "$(dirname $OUTPUT_PATH)"
 sass "$THEME_ROOT/scss/default.scss" "$OUTPUT_PATH"
