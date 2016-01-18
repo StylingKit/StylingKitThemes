@@ -1,14 +1,22 @@
 PODS:
-  - StylingKitThemes/blue (0.1.0)
+  - StylingKitThemes/blue/css (0.1.0):
+    - StylingKitThemes/Core
+    - StylingKitThemes/icons
+  - StylingKitThemes/blue/scss (0.1.0):
+    - StylingKitThemes/Core
+    - StylingKitThemes/icons
+  - StylingKitThemes/Core (0.1.0)
+  - StylingKitThemes/icons (0.1.0)
 
 DEPENDENCIES:
-  - StylingKitThemes/blue (from `../`)
+  - StylingKitThemes/blue/css (from `../`)
+  - StylingKitThemes/blue/scss (from `../`)
 
 EXTERNAL SOURCES:
   StylingKitThemes:
     :path: "../"
 
 SPEC CHECKSUMS:
-  StylingKitThemes: fe35908118e5f231653ddbd70129575e460c34e6
+  StylingKitThemes: 0774b5f1a6f31a526229e25b4c5eaaf5d8d32952
 
 COCOAPODS: 0.39.0
