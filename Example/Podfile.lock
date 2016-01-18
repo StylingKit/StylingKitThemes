@@ -1,0 +1,14 @@
+PODS:
+  - StylingKitThemes (0.1.0)
+
+DEPENDENCIES:
+  - StylingKitThemes (from `../`)
+
+EXTERNAL SOURCES:
+  StylingKitThemes:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  StylingKitThemes: 0b40b6785273c87bb531623fe7035509f0534a49
+
+COCOAPODS: 0.39.0
