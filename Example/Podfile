@@ -5,6 +5,5 @@ use_frameworks!
 
 
 target 'StylingKitThemes_Tests', :exclusive => true do
-  pod "StylingKitThemes/blue", :path => "../"
-  
+  pod "StylingKitThemes", :path => "../", :subspecs => ["blue/css", "blue/scss"]
 end

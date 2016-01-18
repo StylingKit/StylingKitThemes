@@ -38,10 +38,19 @@ Pod::Spec.new do |s|
   }
 
   s.subspec 'blue' do |ss|
-    ss.resource_bundles = {
-      'StylingKitThemes' => ['Pod/Assets/blue/css/*.css']
-    }
+    ss.default_subspec = 'css'
+    
+    ss.subspec 'css' do |sss|
+      sss.resource_bundles = {
+        'StylingKitThemes' => ['Pod/Assets/blue/css/*.css']
+      }
+    end
+
+    ss.subspec 'scss' do |sss|
+      sss.preserve_paths = 'Pod/Assets/blue/scss/*.scss'
+    end
   end
+
 
   # Disabled to not require clients to have sass presinstalled
   # s.prepare_command = <<-CMD
