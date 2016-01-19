@@ -35,11 +35,10 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'Pod/Classes/**.{h,m}'
-  end
 
-  s.subspec 'icons' do |ss|
+    ss.preserve_paths = ['Pod/Assets/scripts']
     ss.resource_bundles = {
-      'StylingKitThemes-icons' => ['Pod/Assets/icons/*.svg']
+      'StylingKitThemes' => ['Pod/Assets/icons/*.svg']
     }
   end
 
@@ -51,14 +50,12 @@ Pod::Spec.new do |s|
         'StylingKitThemes-blue' => ['Pod/Assets/blue/css/*.css']
       }
 
-      sss.dependency 'StylingKitThemes/icons'
       sss.dependency 'StylingKitThemes/Core'
     end
 
     ss.subspec 'scss' do |sss|
-      sss.preserve_paths = ['Pod/Assets/blue/scss/*.scss', 'Pod/Assets/scripts']
+      sss.preserve_paths = ['Pod/Assets/blue/scss/*.scss', 'Pod/Assets/blue/scripts']
 
-      sss.dependency 'StylingKitThemes/icons'
       sss.dependency 'StylingKitThemes/Core'
     end
   end
