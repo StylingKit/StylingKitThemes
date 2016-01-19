@@ -6,6 +6,9 @@
  * http://opensource.org/licenses/MIT
  *
  */
+stylingkit-config {
+  enabled: true; }
+
 /* Variables */
 /*
  * Variables
@@ -237,7 +240,7 @@ collection-view .icon {
  * Icons
  * --------------------------------
  */
-pixate-config {
+stylingkit-config {
   image-count: 400; }
 
 .icon {
