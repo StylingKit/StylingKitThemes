@@ -48,7 +48,7 @@ Pod::Spec.new do |s|
     
     ss.subspec 'css' do |sss|
       sss.resource_bundles = {
-        'StylingKitThemes-css' => ['Pod/Assets/blue/css/*.css']
+        'StylingKitThemes-blue' => ['Pod/Assets/blue/css/*.css']
       }
 
       sss.dependency 'StylingKitThemes/icons'
