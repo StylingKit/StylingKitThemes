@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "StylingKitThemes"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "Themes repository for StylingKit."
 
 # This description is used to generate tags and improve search results.
@@ -34,12 +34,23 @@ Pod::Spec.new do |s|
   s.default_subspec = "Core"
 
   s.subspec 'Core' do |ss|
-    ss.source_files = 'Pod/Classes/**.{h,m}'
+    ss.default_subspec = 'All'
 
-    ss.preserve_paths = ['Pod/Assets/scripts']
-    ss.resource_bundles = {
-      'StylingKitThemes' => ['Pod/Assets/icons/*.svg']
-    }
+    ss.subspec 'All' do |sss|
+      sss.dependency 'StylingKitThemes/Core/Scripts'
+      sss.dependency 'StylingKitThemes/Core/Icons'
+    end
+
+    ss.subspec 'Icons' do |sss|
+      sss.source_files = 'Pod/Classes/**.{h,m}' # Needed to get framework created
+      sss.resource_bundles = {
+        'StylingKitThemes' => ['Pod/Assets/icons/*.svg']
+      }
+    end
+
+    ss.subspec 'Scripts' do |sss|
+      sss.preserve_paths = ['Pod/Assets/scripts']
+    end
   end
 
   s.subspec 'blue' do |ss|
