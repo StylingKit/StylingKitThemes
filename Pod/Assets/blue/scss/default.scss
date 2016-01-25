@@ -1,13 +1,15 @@
 /*
- * Copyright 2015-present StylingKit Development Team. All rights reserved.
- * Copyright 2013 Pixate, Inc.
- * Licensed under the MIT License
- * http://opensource.org/licenses/MIT
  *
  */
 
 stylingkit-config {
   enabled: true;
+
+  parse-error-destination: console;
+  //cache-styles: auto;
+  cache-styles: auto; // minimize-styling cache-cells cache-images;
+  image-cache-count: 400;
+  image-cache-size: 20971520; // 20MB
 }
 
 /* Variables */
@@ -25,3 +27,4 @@ stylingkit-config {
 @import 'forms';
 @import 'icons';
 @import 'tables';
+@import 'custom';

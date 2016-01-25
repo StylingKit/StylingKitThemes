@@ -10,11 +10,19 @@ $blue:              #0096D7;
 $blue-light:        #00B2FF;
 $blue-semidark:     #0070A3;
 $blue-dark:         #002C40;
+$blue-tint:         #2980B9; // belize hole
+$blue-main:         #2C3E50; // midnight blue
+$blue-grey:         #34495E; // wet asphalt
 $white:             #FFFFFF;
 $white-smoke:       #F7F8FA;
 $gray:              #B0B1B4;
 $gray-superlight:   #F7F7F7;
 $gray-light:        #D8D9DC;
+$white-cloudy:      #ECF0F1;
+$gray:              #7F8C8D; // asbestos
+$gray-light:        #95A5A6; // concrete
+
+$gray-superlight:   #B2B2B2;
 $gray-dark:         #53555A;
 $green:             #00D705;
 $yellow:            #D7D400;
@@ -23,61 +31,82 @@ $red:               #D70000;
 
 /* Theme */
 
-$app-bg:                                $white;
+$app-bg:                                $blue-main;
+$app-tint:                              $blue-tint;
+$text-main-color:                       $white;
 $icon-bg:                               transparent; /* Note: optimize by setting to your preferred color - either here, or in more specific contexts where you use icons */
 
 
 /* Typography */
 
-$font-family-base:                      'Avenir';
-$font-size-base:                        14pt;
-$font-size-superlarge:                  22pt;
-$font-size-large:                       18pt;
-$font-size-small:                       12pt;
-$font-size-supersmall:                  10pt;
-$heading-font-family:                   $font-family-base;
+$font-family-base:                      'SF-UI-Text';
+$font-family-mono:                      'Courier New';
 
+// Base 16pt, ModularScale: 1.25
+$font-size-extralarge:                  31.25pt;
+$font-size-superlarge:                  25pt;
+$font-size-large:                       20pt;
+$font-size-base:                        16pt;
+$font-size-small:                       12.8pt;
+$font-size-supersmall:                  10.24pt;
+$font-size-extrasmall:                  8.192pt;
+
+// Base 16pt, ModularScale: 1.125
+// $font-size-extralarge:                  22.781pt;
+// $font-size-superlarge:                  20.25pt;
+// $font-size-large:                       18pt;
+// $font-size-base:                        16pt;
+// $font-size-small:                       14.222pt;
+// $font-size-supersmall:                  12.642pt;
+// $font-size-extrasmall:                  11.237pt;
+
+$heading-font-family:                   $font-family-base;
+$heading-font-weight:                   normal;
+$heading-font-color:                    $white;
 
 /* Navigation bar */
 
-$navbar-bg:                             $blue;
+$navbar-bg:                             $blue-main;
 $navbar-text-color:                     $white;
 $navbar-text-font:                      $font-family-base;
 $navbar-title-text-weight:              bold;
 $navbar-text-weight:                    light;
-$navbar-text-size:                      17pt;
+$navbar-text-size:                      $font-size-base;
 $navbar-bar-button-font:                $font-family-base;
 $navbar-bar-button-color:               $white;
 
 
 /* Tab bar */
 
-$tabbar-bg:                             $white;
-$tabbar-border-color:                   $gray-light;
+$tabbar-bg:                             $white-cloudy;
+$tabbar-border-color:                   $white-cloudy;
 $tabbar-text-color:                     $gray;
-$tabbar-text-color-selected:            $blue;
+$tabbar-text-color-selected:            $blue-tint;
 $tabbar-text-font:                      $font-family-base;
-$tabbar-text-size:                      $font-size-supersmall;
+$tabbar-text-size:                      $font-size-extrasmall;
 
 
 /* Table views */
 
-$table-text-color:                      $gray-dark;
+$table-bg:                              $app-bg;
+$table-cell-bg:                         $app-bg;
+$table-cell-odd-bg:                     $app-bg;
+$table-text-color:                      $white;
 $table-text-font:                       $font-family-base;
 $table-text-size:                       $font-size-base;
 $table-heading-text-color:              $white;
 $table-heading-text-size:               $font-size-small;
-$table-heading-bg-color:                $blue-semidark;
+$table-heading-bg-color:                $app-bg;
 
 
 /* Collection views */
 
-$collection-background-color:           $gray-superlight;
+$collection-background-color:           $blue-grey;
 $collection-cell-border-width:          0px;
 $collection-cell-border-color:          $gray;
-$collection-cell-border-radius:         5pt;
+$collection-cell-border-radius:         0pt;
 $collection-cell-box-shadow-color:      $gray-light;
-$collection-cell-background-color:      $white;
+$collection-cell-background-color:      $app-bg;
 
 
 /* Forms */
@@ -99,34 +128,34 @@ $input-state-error-border:              $red;
 $text-view-bg-color:                    $gray-superlight;
 $text-view-border-color:                $gray-superlight;
 
-$slider-bg:                             $blue;
+$slider-bg:                             $blue-tint;
 $slider-border:                         $gray-dark;
-$slider-track-min-bg:                   $blue;
+$slider-track-min-bg:                   $blue-tint;
 $slider-track-max-bg:                   $gray-light;
 
-$switch-thumb-bg:                       $blue;
+$switch-thumb-bg:                       $blue-tint;
 $switch-thumb-border-color:             $white;
 $switch-on-bg:                          $gray-dark;
 $switch-off-bg:                         $gray-dark;
 
-$segmented-control-bg:                  $blue;
-$segmented-control-border-radius:       5pt;
+$segmented-control-bg:                  $blue-tint;
+$segmented-control-border-radius:       3pt;
 $segmented-control-text-font:           $font-family-base;
-$segmented-control-text-size:           $font-size-base;
-$segmented-control-text-color:          $blue;
+$segmented-control-text-size:           $font-size-small;
+$segmented-control-text-color:          $blue-tint;
 $segmented-control-text-color-selected: $white;
 
 
 /* Buttons */
 
-$button-bg-color:                       $blue;
-$button-bg-color-highlighted:           darken($blue, 20%);
+$button-bg-color:                       $blue-main;
+$button-bg-color-highlighted:           darken($blue-main, 20%);
 $button-text-color:                     $white;
 $button-text-color-highlighted:         darken($button-text-color, 50%);
 $button-text-font:                      $font-family-base;
-$button-border-radius:                  3pt;
+$button-border-radius:                  2pt;
 $button-text-size:                      $font-size-base;
-$button-text-size-large:                $font-size-superlarge;
+$button-text-size-large:                $font-size-extralarge;
 $button-text-size-small:                $font-size-small;
 
 

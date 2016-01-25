@@ -4,6 +4,14 @@
  */
 
 
+.table-view {
+    background-color: $table-bg;
+}
+
+.table-view-cell {
+    background-color: $table-cell-bg;
+}
+
 .table-cell text-label {
     color: $table-text-color;
     font-family: $table-text-font;
@@ -11,12 +19,8 @@
     font-weight: light;
 }
 
-.table-cell {
-    background-color: $white;
-}
-
 .table-cell:nth-child(odd) {
-    background-color: $gray-superlight;
+    background-color: $table-cell-odd-bg;
 }
 
 /* Note: would prefer to use classes here, but since we're not using a custom section view, there's no easy way to set one */

@@ -9,36 +9,33 @@
 .h1, .h2, .h3,
 .h4, .h5, .h6 {
     font-family: $heading-font-family;
-    font-weight: bold;
+    font-weight: $heading-font-weight;
+    color: $heading-font-color;
 }
 
+
 .h1 {
-    font-size: 30pt;
-    height: 34;
+    font-size: $font-size-extralarge;
 }
 
 .h2 {
-    font-size: 24pt;
-    height: 28;
+    font-size: $font-size-superlarge;
 }
 
 .h3 {
-    font-size: 18pt;
-    height: 22;
+    font-size: $font-size-large;
 }
 
 .h4 {
-    font-size: 16pt;
-    height: 20;
-}
-
-.h5 {
     font-size: $font-size-base;
 }
 
+.h5 {
+    font-size: $font-size-small;
+}
+
 .h6 {
-    font-size: 12pt;
-    height: 16;
+    font-size: $font-size-supersmall;
 }
 
 
