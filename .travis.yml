@@ -15,7 +15,7 @@ before_install:
 
 
 env:
- - workspace="Example/StylingKit.xcworkspace" scheme="StylingKit-Example" destination="platform=iOS Simulator,name=iPhone 6s"
+ - workspace="Example/StylingKitThemes.xcworkspace" scheme="StylingKitThemes-Example" destination="platform=iOS Simulator,name=iPhone 6s"
 
 script:
  - ./scripts/travis_build
