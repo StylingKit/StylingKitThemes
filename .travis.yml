@@ -9,6 +9,7 @@ rvm: 2.2 # top most supported by CocoaPods, required 2.2.2 because of 'activesup
 cache: cocoapods
 podfile: Example/Podfile
 before_install:
+- rvm list known
 - gem install cocoapods --version 0.39.0 # Since Travis is not always on latest version
 - pod _0.39.0_ install --project-directory=Example
 
