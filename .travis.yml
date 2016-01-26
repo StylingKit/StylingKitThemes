@@ -2,6 +2,7 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
+osx_image: xcode7.2
 language: objective-c
 rvm: 2.2.4 # top most supported by CocoaPods, required 2.2.2 because of 'activesupport' dependency
 
