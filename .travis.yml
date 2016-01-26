@@ -3,12 +3,13 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 language: objective-c
+rvm: 2.2.4 # top most supported by CocoaPods, required 2.2.2 because of 'activesupport' dependency
 
 cache: cocoapods
 podfile: Example/Podfile
 before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-- pod install --project-directory=Example
+- gem install cocoapods --version 0.39.0 # Since Travis is not always on latest version
+- pod _0.39.0_ install --project-directory=Example
 
 script:
 - set -o pipefail && xcodebuild test -workspace Example/StylingKitThemes.xcworkspace -scheme StylingKitThemes-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
