@@ -4,6 +4,6 @@ platform :ios, '8.1'
 use_frameworks!
 
 
-target 'StylingKitThemes_Tests', :exclusive => true do
+target 'StylingKitThemes_Tests' do
   pod "StylingKitThemes", :path => "../", :subspecs => ["blue/css", "blue/scss"]
 end

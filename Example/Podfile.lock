@@ -5,6 +5,8 @@ PODS:
     - StylingKitThemes/Core
   - StylingKitThemes/Core (0.1.2):
     - StylingKitThemes/Core/All (= 0.1.2)
+    - StylingKitThemes/Core/Icons (= 0.1.2)
+    - StylingKitThemes/Core/Scripts (= 0.1.2)
   - StylingKitThemes/Core/All (0.1.2):
     - StylingKitThemes/Core/Icons
     - StylingKitThemes/Core/Scripts
@@ -20,6 +22,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  StylingKitThemes: 22712826545a815d5539e1664c5ced577c3c09bd
+  StylingKitThemes: c740d5ebd790e7225fba4f83b10a5cf8292dc125
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 76357578ea69d2855be017ea0e9ec599cd0836f3
+
+COCOAPODS: 1.0.1

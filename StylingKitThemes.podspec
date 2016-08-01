@@ -31,11 +31,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.1'
   s.requires_arc = true
 
-  s.default_subspec = "Core"
+  s.default_subspec = "Core/All"
 
   s.subspec 'Core' do |ss|
-    ss.default_subspec = 'All'
-
     ss.subspec 'All' do |sss|
       sss.dependency 'StylingKitThemes/Core/Scripts'
       sss.dependency 'StylingKitThemes/Core/Icons'
@@ -54,8 +52,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'blue' do |ss|
-    ss.default_subspec = 'css'
-    
     ss.subspec 'css' do |sss|
       sss.resource_bundles = {
         'StylingKitThemes-blue' => ['Pod/Assets/blue/css/*.css']
