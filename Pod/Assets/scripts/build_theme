@@ -13,7 +13,9 @@ if [ -z $(which sass) ] ;then
 	exit 1
 fi
 
-THEME_ROOT="$(dirname $0)/../$THEME_NAME"
+if [[ -z $THEME_ROOT ]]
+	THEME_ROOT="$(dirname $0)/../scss/$THEME_NAME"
+fi
 
 if [[ -z $TARGET_BUILD_DIR || -z $CONTENTS_FOLDER_PATH ]] ;then
 	OUTPUT_PATH="$THEME_ROOT/css/default.css"
@@ -22,4 +24,4 @@ else
 fi
 
 mkdir -p "$(dirname $OUTPUT_PATH)"
-sass "$THEME_ROOT/scss/default.scss" "$OUTPUT_PATH"
+sass "$THEME_ROOT/default.scss" "$OUTPUT_PATH"
